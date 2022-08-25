@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+segment:string='list'
+  constructor(private router:Router) {}
 
-  constructor() {}
-
+  login(){
+    this.router.navigateByUrl('/catalogue');
+  }
+  segmentChanged(ev: any) {
+    this.segment = ev.detail.value;
+  }
 }

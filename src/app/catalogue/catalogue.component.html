@@ -1,19 +1,22 @@
 <!--<h5 class="card-title text-center mt-2" id="title">You can't build peace on empty stomachs</h5>-->
-<div class="input-group">
-    <div class="form-outline">
-        <input type="text" id="form1" class="form-control" placeholder="Search" NgModel />
+<ion-content>
+    <img src="./assets/images/burger-spread-four-hands.jpg" />
+    <div class="input-group mt-2">
+        <div class="form-outline">
+            <input type="text" id="form1" class="form-control" placeholder="Search" NgModel />
+        </div>
     </div>
-</div>
-<div class="row m-3">
-    <ng-container>
-        <app-burger *ngFor="let burger of burgers " class="col-sm-3 mb-4 mt-3" [produitRecu]="burger"></app-burger>
-    </ng-container>
-    <br>
-    <br>
-    <hr>
-    <h5 class="card-title text-center mt-2" id="title">Starving ? Taste our menus </h5>
-    <br>
-    <ng-container>
-        <app-menu *ngFor="let menu of menus " class="col-sm-3 mb-4 mt-3" [produitRecu]="menu"></app-menu>
-    </ng-container>
-</div>
+    <div class="row m-3">
+        <ng-container>
+            <app-burger *ngFor="let burger of burgers " class="col-sm-3 mb-4 mt-3" [produitRecu]="burger"></app-burger>
+        </ng-container>
+        <br>
+        <br>
+        <hr>
+        <h5 class="card-title text-center mt-2" id="title">Starving ? Taste our menus </h5>
+        <br>
+        <ng-container>
+            <app-menu *ngFor="let menu of menus " class="col-sm-3 mb-4 mt-3" [produitRecu]="menu"></app-menu>
+        </ng-container>
+    </div>
+</ion-content>

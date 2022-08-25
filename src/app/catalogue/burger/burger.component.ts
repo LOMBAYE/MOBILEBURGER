@@ -10,6 +10,7 @@ import { Burger } from 'src/models/Produits.model';
 export class BurgerComponent implements OnInit {
 
   @Input('produitRecu') produit!:Burger;
+  
   constructor(private sanitizer:DomSanitizer) { }
 
   ngOnInit(): void {

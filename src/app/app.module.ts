@@ -7,21 +7,23 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+
+import { SwiperModule } from 'swiper/angular';
 import { CatalogueComponent } from './catalogue/catalogue.component';
 import { BurgerComponent } from './catalogue/burger/burger.component';
 import { MenuComponent } from './catalogue/menu/menu.component';
-
 @NgModule({
   declarations: [
     AppComponent,
-    CatalogueComponent,
-    BurgerComponent,
-    MenuComponent,
+    // CatalogueComponent,
+    // BurgerComponent,
+    // MenuComponent,
   ],
   imports: [BrowserModule, 
     IonicModule.forRoot(),
      AppRoutingModule,
      HttpClientModule,
+     SwiperModule,
     ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
