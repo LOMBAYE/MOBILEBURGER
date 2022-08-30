@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Heureux de vous revoir </ion-title>
+        <ion-icon name="play-back-outline" [routerLink]="['/client']"></ion-icon>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <table class="table table-bordered table-striped">
+        <tr class="bg-primary text-white mt-bordered">
+            <th>#</th>
+            <th>Quantite</th>
+            <th>Produit</th>
+            <th>Prix</th>
+        </tr>
+        <tr *ngFor="let ligne of ligneDeCom,let i= index" class="bg-light">
+            <td>{{i +1}}</td>
+            <td>{{ligne.quantite}}</td>
+            <td>{{ligne.produit.nom}}</td>
+            <td>{{ligne.prix}}</td>
+        </tr>
+    </table>
+</ion-content>

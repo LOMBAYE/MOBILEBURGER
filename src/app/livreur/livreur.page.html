@@ -1,0 +1,20 @@
+<app-accueil></app-accueil>
+<p class="title text-center text-decoration-underline mt-3">Mes livraisons</p>
+<ion-content>
+    <table class="table table-bordeless">
+        <tr class="bg-primary text-white mt-bordered">
+            <th class="p-2">#</th>
+            <th>Date</th>
+            <th>Numero</th>
+            <th class="text-center">Details</th>
+        </tr>
+        <tr *ngFor="let livraison of livraisons,let i= index" class="bg-light">
+            <td>{{i +1}}</td>
+            <td>{{livraison.date| date:'dd-MM-yyyy HH:mm'}}</td>
+            <td>{{livraison.numero}}</td>
+            <td class="text-center">
+                <ion-icon name="chevron-forward-circle-outline" [routerLink]="['/livreur/livraison',livraison.id]"></ion-icon>
+            </td>
+        </tr>
+    </table>
+</ion-content>

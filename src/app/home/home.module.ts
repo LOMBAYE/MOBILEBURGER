@@ -9,6 +9,9 @@ import { CatalogueComponent } from '../catalogue/catalogue.component';
 import { CatalogueListPage } from '../catalogue-list/catalogue-list.page';
 import { BurgerComponent } from '../catalogue/burger/burger.component';
 import { MenuComponent } from '../catalogue/menu/menu.component';
+import { AuthentificationPage } from '../authentification/authentification.page';
+import { IonicHeaderParallaxModule } from 'ionic-header-parallax';
+import { AccueilPage } from '../accueil/accueil.page';
 // import { CataloguePage } from '../catalogue/catalogue.page';
 // import { CatalogueComponent } from '../catalogue/catalogue.component';
 
@@ -19,6 +22,7 @@ import { MenuComponent } from '../catalogue/menu/menu.component';
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
+    IonicHeaderParallaxModule,
   ],
   declarations: [
     HomePage,
@@ -26,6 +30,8 @@ import { MenuComponent } from '../catalogue/menu/menu.component';
     CatalogueComponent,
     BurgerComponent,
     MenuComponent,
+    AuthentificationPage,
+    AccueilPage
   ]
 })
 export class HomePageModule {}

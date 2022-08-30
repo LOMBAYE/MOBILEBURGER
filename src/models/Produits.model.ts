@@ -61,7 +61,7 @@ export interface Commande{
     numero:string,
     modeReception:boolean,
     date:Date,
-    client:User,
+    client:Personne,
     prix:number,
     expedie:boolean,
     Produits:ligneDeCom[]
@@ -78,14 +78,21 @@ export interface Complement{
     frites:Frites[]
 }
 export interface User{
-    nomComplet:string,
+    id?: number,
+    username?:string,
+    password?:string,
+}
+export interface Personne{
+    id:number,
     email:string,
-    telephone:string,
+    password:string,
+    telephone?:string,
 }
 export interface Livreur{
+    "nomComplet": string,
     "matricule": string,
     "etat": string,
-    "livraisons": string[],
+    "livraisons": Livraison[],
     "id": number,
     "email": string,
 }
@@ -99,6 +106,7 @@ export interface Zone{
 export interface Livraison{
     id: number,
     isEtat:boolean,
+    numero:string,
     commandes:Commande[],
     livreur:{
         id:number,

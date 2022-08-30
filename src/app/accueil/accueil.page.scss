@@ -1,0 +1,29 @@
+.accueil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    // background-image: url(assets/images/burger-spread-four-hands.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#titre {
+    font-size: 4rem;
+    color: white;
+    font-family: "Helvetica Neue";
+    animation-name: glow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes glow {
+    from {
+        opacity: 0;
+        text-shadow: 0 0 10px #502314, 0 0 20px #502314, 0 0 30px #502314, 0 0 40px #502314, 0 0 50px #502314, 0 0 60px #502314, 0 0 70px #502314;
+    }
+    to {
+        opacity: 1;
+        text-shadow: 0 0 20px #502314, 0 0 30px black, 0 0 40px black, 0 0 50px black, 0 0 60px black, 0 0 70px black, 0 0 80px #f5ebdc;
+    }
+}

@@ -27,7 +27,7 @@
                 <ion-label>Mes commandes</ion-label>
             </ion-item>
             <ion-item>
-                <ion-icon name="warning" slot="start"></ion-icon>
+                <ion-icon name="log-out-outline" slot="start"></ion-icon>
                 <ion-label>Deconnexion</ion-label>
             </ion-item>
         </ion-list>
@@ -49,22 +49,17 @@
 </div>-->
 
 <div class="h-100 border">
-    <ion-header>
-        <ion-toolbar>
-            <ion-title>Brasil Burger</ion-title>
-        </ion-toolbar>
-    </ion-header>
+    <app-accueil></app-accueil>
     <ion-content fullscreen>
         <ion-slides>
             <ion-slide>
                 <ion-card>
-                    <img src="./assets/images/burger-spread-four-hands.jpg" />
                     <div class="segment">
                         <ion-segment color="warning" scrollable (ionChange)="segmentChanged($event)" value="grille">
-                            <ion-segment-button value="grid" class="bouton" layout="icon-end">
+                            <ion-segment-button value="grid" layout="icon-end">
                                 <ion-icon name="apps-outline"></ion-icon>
                             </ion-segment-button>
-                            <ion-segment-button value="list" class="bouton" layout="icon-end">
+                            <ion-segment-button value="list" layout="icon-end">
                                 <ion-icon name="list-outline"></ion-icon>
                             </ion-segment-button>
                         </ion-segment>
@@ -74,32 +69,7 @@
                 </ion-card>
             </ion-slide>
             <ion-slide>
-                <ion-grid>
-                    <img src="./assets/images/burger-spread-four-hands.jpg" />
-                    <ion-row>
-                        <ion-col>
-                            <ion-item>
-                                <ion-label position="fixed">Login</ion-label>
-                                <ion-input placeholder="Login"></ion-input>
-                            </ion-item>
-                        </ion-col>
-                    </ion-row>
-                    <ion-row>
-                        <ion-col>
-                            <ion-item>
-                                <ion-label position="fixed">Mot de passe</ion-label>
-                                <ion-input placeholder="Password"></ion-input>
-                            </ion-item>
-                        </ion-col>
-                    </ion-row>
-                    <ion-row>
-                        <ion-col>
-                            <ion-item>
-                                <ion-button color="success" (click)="login()">Se connecter</ion-button>
-                            </ion-item>
-                        </ion-col>
-                    </ion-row>
-                </ion-grid>
+                <app-authentification></app-authentification>
             </ion-slide>
         </ion-slides>
     </ion-content>

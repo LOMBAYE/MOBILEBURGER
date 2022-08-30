@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Mes commandes</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <table class="table table-bordeless">
+        <tr class="bg-primary text-white mt-bordered">
+            <th class="p-2">#</th>
+            <th>Date</th>
+            <th>Etat</th>
+            <th>Code</th>
+            <th class="text-center">Actions</th>
+        </tr>
+        <tr *ngFor="let commande of commandes,let i= index" class="bg-light">
+            <td>{{i +1}}</td>
+            <td>{{commande.date| date:'dd-MM HH:mm'}}</td>
+            <td>{{commande.isEtat}}</td>
+            <td>{{commande.code}}</td>
+            <td class="text-center">
+                <ion-icon name="close-circle-outline"></ion-icon>
+                <ion-icon name="caret-forward-outline" [routerLink]="['/client/commande',commande.id]"></ion-icon>
+            </td>
+        </tr>
+    </table>
+</ion-content>
