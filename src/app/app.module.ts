@@ -12,9 +12,11 @@ import { SwiperModule } from 'swiper/angular';
 import { CatalogueComponent } from './catalogue/catalogue.component';
 import { BurgerComponent } from './catalogue/burger/burger.component';
 import { MenuComponent } from './catalogue/menu/menu.component';
+import { FiltrerPipe } from './pipes/filtrer.pipe';
 @NgModule({
   declarations: [
     AppComponent,
+    FiltrerPipe,
     // CatalogueComponent,
     // BurgerComponent,
     // MenuComponent,

@@ -3,6 +3,9 @@
         <ion-title>Mes commandes</ion-title>
     </ion-toolbar>
 </ion-header>
+<div class="form-outline float-end">
+    <input type="text" id="form1" class="form-control" [(ngModel)]="research" placeholder="Search par etat" NgModel />
+</div>
 
 <ion-content>
     <table class="table table-bordeless">
@@ -13,11 +16,14 @@
             <th>Code</th>
             <th class="text-center">Actions</th>
         </tr>
-        <tr *ngFor="let commande of commandes,let i= index" class="bg-light">
+        <tr *ngFor="let commande of commandes ,let i= index" class="bg-light">
             <td>{{i +1}}</td>
             <td>{{commande.date| date:'dd-MM HH:mm'}}</td>
             <td>{{commande.isEtat}}</td>
             <td>{{commande.code}}</td>
+            <td>
+                <qrcode qrdata={{commande.code}}></qrcode>
+            </td>
             <td class="text-center">
                 <ion-icon name="close-circle-outline"></ion-icon>
                 <ion-icon name="caret-forward-outline" [routerLink]="['/client/commande',commande.id]"></ion-icon>

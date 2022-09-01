@@ -7,13 +7,17 @@ import { IonicModule } from '@ionic/angular';
 import { ClientPageRoutingModule } from './client-routing.module';
 
 import { ClientPage } from './client.page';
+import { FiltrerPipe } from '../pipes/filtrer.pipe';
+import { QRCodeModule } from 'angularx-qrcode';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ClientPageRoutingModule
+    ClientPageRoutingModule,
+    // FiltrerPipe,
+    QRCodeModule
   ],
   declarations: [ClientPage]
 })
